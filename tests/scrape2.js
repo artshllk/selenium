@@ -18,6 +18,7 @@ async function scrape() {
     let line = await driver.findElement(By.partialLinkText("Messi"));
     console.log("\nFound Link Containing 'Messi':");
     console.log(await line.getText());
+    console.log(await line.getAttribute("href"));
   } catch (error) {
     console.error("Error:", error);
   } finally {
