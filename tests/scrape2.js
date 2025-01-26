@@ -9,7 +9,6 @@ async function scrape() {
 
     let links = await driver.findElements(By.tagName("a"));
 
-    console.log("Extracted Links:");
     for (let link of links) {
       let href = await link.getAttribute("href");
       if (href) console.log(href);
